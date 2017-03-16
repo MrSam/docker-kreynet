@@ -5,7 +5,7 @@ ENV VANTAGE_VERSION vantage-1.3.4
 
 RUN apt-get update && apt-get install -qq -y build-essential wget libssl-dev libssl-doc openssl libgnutls-openssl27 --no-install-recommends 
 
-COPY $VANTAGE_VERSION.tar /vantage/$VANTAGE_VERSION.tar
+COPY dist/$VANTAGE_VERSION.tar /vantage/$VANTAGE_VERSION.tar
 
 RUN cd /vantage/ ; tar -xf $VANTAGE_VERSION.tar ; cd $VANTAGE_VERSION ; ./configure --prefix=/vantage --enable-ipv6 --enable-openssl
 
