@@ -21,8 +21,7 @@ $ docker build -t docker-kreynet .
 To start a new container use the following command:
 
 ```sh
-$ docker run -p 6667:6667 -ti docker-kreynet bash
-root@container# /vantage/sbin/vantage
+$ docker run -p 6667:6667 -ti docker-kreynet
 ```
 
 You can now access the IRC server on localhost port 6667
